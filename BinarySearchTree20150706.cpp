@@ -1,3 +1,4 @@
+//[CSDN]http://blog.csdn.net/foreverling
 #include <iostream>
 #include <algorithm>
 using namespace std;

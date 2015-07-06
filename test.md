@@ -1,7 +1,7 @@
 #Title
 **STRONG**
 [fadf](http://www.baidu.com)
-
+```
 int main()
 {
     TreeNode *root = NULL;
@@ -17,3 +17,4 @@ int main()
     }
     preorderTraverse(root); cout<<endl;
 }
+```

@@ -1,6 +1,3 @@
-//[CSDN]http://blog.csdn.net/foreverling
-**MarkDown**
-#Title
 #include <iostream>
 #include <algorithm>
 using namespace std;

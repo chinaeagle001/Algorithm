@@ -7,7 +7,7 @@ fsadf
 **STRONG**
 
 [fadf](http://www.baidu.com)
-```
+```c++
 int main()
 {
     TreeNode *root = NULL;

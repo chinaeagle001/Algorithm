@@ -1,3 +1,5 @@
+没有父亲结点的Binary Search Tree实现代码：
+```C++
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -185,3 +187,4 @@ int main()
     }
     preorderTraverse(root); cout<<endl;
 }
+```

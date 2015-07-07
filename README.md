@@ -1,2 +1,2 @@
 # Welcome
-Please click [³þÐË](http://blog.csdn.net/foreverling) to visit my CSDN blog for more details.
+Please click [æ¥šå…´](http://blog.csdn.net/foreverling) to visit my CSDN blog for more details.

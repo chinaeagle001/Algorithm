@@ -1,5 +1,5 @@
 具有父亲结点的Binary Search Tree实现代码：
-```
+```C++
 #include <iostream>
 #include <cstring>
 #include <cstdlib>

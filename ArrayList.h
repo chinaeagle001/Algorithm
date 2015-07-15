@@ -188,14 +188,3 @@ template<class T> void ArrayList<T>::copyFrom(const ArrayList<T>& r)
     }
 }
 #endif // ARRAYLIST_H
-
-
-
-
-
-
-
-
-
-
-

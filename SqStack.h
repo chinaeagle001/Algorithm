@@ -84,3 +84,36 @@ template<class T> void SqStack<T>::push(const T& e)
     ++m_top;
 }
 #endif // SQSTACK_H
+
+//#include <iostream>
+//#include "SqStack.h"
+//using namespace std;
+//
+//void print(SqStack<int>& r)
+//{
+//    while (!r.empty())
+//    {
+//        cout<<r.top()<<" ";
+//        r.pop();
+//    }
+//    cout<<endl;
+//}
+//
+//int main()
+//{
+//    SqStack<int> mystack(5);
+//    for (int i = 0; i < 10; i++)
+//    {
+//        mystack.push(i);
+//    }
+//
+//    SqStack<int> mystack2(3);
+//    for (int i = 100; i < 110; i++)
+//    {
+//        mystack2.push(i);
+//    }
+//    print(mystack);
+//    print(mystack2);
+//
+//    return 0;
+//}

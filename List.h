@@ -1,6 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 
+// interface for ArrayList and LinkList
 template<class T>
 class List
 {

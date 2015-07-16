@@ -23,7 +23,7 @@ public:
     bool deleteNode(T&, int);
     void traverse(void (*visit)(const T&)) const;
     ArrayList<T>& operator=(const ArrayList<T>& r);
-//private:
+private:
     int len;
     int size;
     T *elem;
@@ -55,9 +55,6 @@ template<class T> ArrayList<T>::ArrayList(const ArrayList<T>& r)
 
 template<class T> ArrayList<T>::~ArrayList()
 {
-    len = 0;
-    size = 0;
-    elem = NULL;
     delete [] elem;
 }
 
@@ -95,7 +92,12 @@ template<class T> int ArrayList<T>::locateElem(const T& e) const
 
 template<class T> int ArrayList<T>::locatePrior(const T& e) const
 {
-    return locateElem(e) - 1;
+    int i = locateElem(e);
+    if (i > 0)
+    {
+        return i - 1;
+    }
+    return 0;
 }
 
 template<class T> int ArrayList<T>::locateNext(const T& e) const
@@ -165,6 +167,7 @@ template<class T> ArrayList<T>& ArrayList<T>::operator=(const ArrayList<T>& r)
 {
     clear();
     copyFrom(r);
+    return *this;
 }
 
 template<class T> void ArrayList<T>::increase(int n)
@@ -174,7 +177,11 @@ template<class T> void ArrayList<T>::increase(int n)
     {
         p[i] = elem[i];
     }
-    delete [] elem;
+    if (elem != NULL)
+    {
+        delete [] elem;
+    }
+
     elem = p;
     size += 10;
 }
@@ -188,3 +195,48 @@ template<class T> void ArrayList<T>::copyFrom(const ArrayList<T>& r)
     }
 }
 #endif // ARRAYLIST_H
+
+//#include <iostream>
+//#include <cstdio>
+//#include <cstdlib>
+//#include "ArrayList.h"
+//using namespace std;
+//
+//void print(const int& n)
+//{
+//    cout<<n<<" ";
+//}
+//
+//int main()
+//{
+//    ArrayList<int> mylist(10);
+//    for (int i = 0; i < 10; i++)
+//    {
+//        mylist.appendNode(i);
+//    }
+//    mylist.traverse(print); cout<<endl;
+//    printf("len = %d\n", mylist.length());
+//
+//    mylist.insertNode(100, 11);
+//    mylist.insertNode(111,10);
+//    mylist.traverse(print); cout<<endl;
+//    printf("len = %d\n", mylist.length());
+//
+//    int a;
+//    mylist.deleteNode(a, 1);
+//    mylist.traverse(print); cout<<endl;
+//    printf("len = %d\n", mylist.length());
+//
+//    int i = mylist.locateElem(5);
+//    int j = mylist.locatePrior(5);
+//    int k = mylist.locateNext(5);
+//    cout<<i<<" "<<j<<" "<<k<<" "<<endl;
+//
+//    ArrayList<int> mylist2(10);
+//    mylist2 = mylist; //"="运算符
+//    ArrayList<int> mylist2 = mylist; //拷贝构造函数
+//    cout<<mylist2.length()<<endl;
+//    mylist2.traverse(print); cout<<endl;
+//
+//    return 0;
+//}

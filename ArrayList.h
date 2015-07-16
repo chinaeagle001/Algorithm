@@ -233,8 +233,8 @@ template<class T> void ArrayList<T>::copyFrom(const ArrayList<T>& r)
 //    cout<<i<<" "<<j<<" "<<k<<" "<<endl;
 //
 //    ArrayList<int> mylist2(10);
-//    mylist2 = mylist;  //"=" operator
-//    ArrayList<int> mylist2 = mylist;  //copy constructor
+//    mylist2 = mylist; //"=" operator
+//    ArrayList<int> mylist2 = mylist; //copy constructor
 //    cout<<mylist2.length()<<endl;
 //    mylist2.traverse(print); cout<<endl;
 //

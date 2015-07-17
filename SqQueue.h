@@ -17,9 +17,9 @@ public:
     void pop();
 private:
     T *elem;
-    int m_front;
-    int m_rear;
-    int m_size;
+    int m_front; //point to the first element
+    int m_rear; //point to the position after the last element
+    int m_size; //length of array elem, not the count of elements in queue
 };
 
 template<class T> SqQueue<T>::SqQueue(int n)

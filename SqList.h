@@ -24,8 +24,8 @@ public:
     void traverse(void (*visit)(const T&)) const;
     SqList<T>& operator=(const SqList<T>& r);
 private:
-    int len;
-    int size;
+    int len; //count of elements in list
+    int size; //length of array elem
     T *elem;
     void copyFrom(const SqList<T>&);
     void increase(int n);

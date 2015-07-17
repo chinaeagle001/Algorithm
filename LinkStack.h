@@ -22,7 +22,7 @@ public:
     T& top() const;
     void push(const T&);
 private:
-    LinkNode<T> *m_top;
+    LinkNode<T> *m_top; //point to the top element 
 };
 
 template<class T> LinkStack<T>::LinkStack()

@@ -31,8 +31,8 @@ public:
     LinkList<T>& operator=(const LinkList<T>&);
 private:
     void copyFrom(const LinkList<T>&);
-    LinkNode<T> *head;
-    LinkNode<T> *tail;
+    LinkNode<T> *head; //point to the position before the first element
+    LinkNode<T> *tail; //point to the last element
     int len;
 };
 

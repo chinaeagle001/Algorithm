@@ -16,8 +16,8 @@ public:
     void push(const T&);
 private:
     T *elem;
-    int m_size;
-    int m_top;
+    int m_size; //length of array elem
+    int m_top; //point to the position after the top element
 };
 
 template<class T> SqStack<T>::SqStack(int n)

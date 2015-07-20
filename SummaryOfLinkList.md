@@ -1,5 +1,5 @@
 链表的插入、删除、排序、反转等操作的总结：
-```
+```c++
 #include <iostream>
 #include <cstdlib>
 using namespace std;

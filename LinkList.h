@@ -5,7 +5,7 @@
 template<class T>
 struct LinkNode
 {
-    int val;
+    T val;
     LinkNode<T> *next;
 };
 

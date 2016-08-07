@@ -1,4 +1,4 @@
-¾ßÓĞ¸¸Ç×½áµãµÄBinary Search TreeÊµÏÖ´úÂë£º
+å…·æœ‰çˆ¶äº²ç»“ç‚¹çš„Binary Search Treeå®ç°ä»£ç ï¼š
 ```C++
 #include <iostream>
 #include <cstring>
@@ -16,10 +16,6 @@ struct TreeNode
 
 TreeNode* minNode(TreeNode *root)
 {
-//    if (root != NULL && root->left != NULL)
-//    {
-//        return minNode(root->left);
-//    }
     while (root != NULL && root->left != NULL)
     {
         root = root->left;
@@ -66,7 +62,7 @@ void insertNode(TreeNode*& root, int value)
     TreeNode *parentNode = NULL;
     if (root == NULL)
     {
-        root = newnode; //ĞÂ²åÈë½áµã³ÉÎª¸ù½áµã
+        root = newnode; //æ–°æ’å…¥ç»“ç‚¹æˆä¸ºæ ¹ç»“ç‚¹
         return;
     }
 
@@ -100,7 +96,7 @@ bool deleteNode(TreeNode*& root, int value)
     TreeNode *temp;
     if (cur == NULL)
     {
-        return false; //Î´ÕÒµ½½áµã
+        return false; //æœªæ‰¾åˆ°ç»“ç‚¹
     }
     if (cur->left != NULL && cur->right != NULL)
     {
@@ -110,15 +106,15 @@ bool deleteNode(TreeNode*& root, int value)
     }
     else
     {
-        if (cur->left == NULL && cur->right == NULL) //É¾³ıÒ¶×Ó½áµã
+        if (cur->left == NULL && cur->right == NULL) //åˆ é™¤å¶å­ç»“ç‚¹
         {
             temp = NULL;
         }
-        else if (cur->left == NULL) //ÒªÉ¾³ı½áµãµÄ×ó½áµãÎª¿Õ
+        else if (cur->left == NULL) //è¦åˆ é™¤ç»“ç‚¹çš„å·¦ç»“ç‚¹ä¸ºç©º
         {
             temp = cur->right;
         }
-        else if (cur->right == NULL) //ÒªÉ¾³ı½áµãµÄÓÒ½áµãÎª¿Õ
+        else if (cur->right == NULL) //è¦åˆ é™¤ç»“ç‚¹çš„å³ç»“ç‚¹ä¸ºç©º
         {
             temp = cur->left;
         }
@@ -190,15 +186,15 @@ int main()
         insertNode(root, rand() % 100);
     }
 
-    cout<<"ÏÈĞò±éÀú£º";preTraverse(root);cout<<" END"<<endl;
-    cout<<"ÖĞĞò±éÀú£º";inTraverse(root);cout<<" END"<<endl;
-    cout<<"ºóĞò±éÀú£º";postTraverse(root);cout<<" END"<<endl;
+    cout<<"å…ˆåºéå†ï¼š";preTraverse(root);cout<<" END"<<endl;
+    cout<<"ä¸­åºéå†ï¼š";inTraverse(root);cout<<" END"<<endl;
+    cout<<"ååºéå†ï¼š";postTraverse(root);cout<<" END"<<endl;
 
     for (int  i = 0; i < 20; i++)
     {
         deleteNode(root, i);
     }
-    cout<<"ÏÈĞò±éÀú£º";preTraverse(root);cout<<" END"<<endl;
+    cout<<"å…ˆåºéå†ï¼š";preTraverse(root);cout<<" END"<<endl;
 
     TreeNode *temp = minNode(root);
     temp != NULL ? cout<<temp->val<<endl : cout<<"null"<<endl;
